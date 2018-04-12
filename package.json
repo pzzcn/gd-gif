@@ -1,0 +1,23 @@
+{
+  "name": "gd-gif",
+  "version": "1.0.0",
+  "description": "用于生成GIF文件，现阶段主要用于gif验证码的生成",
+  "main": "dlist/GIF.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pzzcn/gd-gif.git"
+  },
+  "keywords": [
+    "nodejs",
+    "gif"
+  ],
+  "author": "pzz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pzzcn/gd-gif/issues"
+  },
+  "homepage": "https://github.com/pzzcn/gd-gif#readme"
+}
