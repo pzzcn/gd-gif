@@ -54,21 +54,27 @@ https://cnodejs.org/topic/581b2502e90cfbec054d763f
 # 方法
 
 
+setWidth//宽度
+参数：number
 
+setHeight//设置高度
+参数：number
 
+setBackground//设备背景颜色
+参数：16进制RGB色，如0066cc
 
-drawText
-getCanvas
-getImage
-| 方法 | 参数 |注释 |
-|--|--|--|
-|setWidth|number|宽度|
-|setHeight|number|设置高度|
-| setBackground |16进制RGB色，如0066cc| 设备背景颜色 |
-| pushColor |16进制RGB色，如0066cc| 向GIF索引中添加颜色 |
-| drawText | 单个文字,x坐标,y坐标,16进制RGB色|添加文字到图片中 |
-| getCanvas || 得到内部的画布，是一个二维数组，可直接操作内存对象使用 |
-| getImage ||获得最后的输出流 |
-|setVerificationCode|验证码字符|生成验证码，参考示例1|
+pushColor//向GIF索引中添加颜色
+参数：16进制RGB色，如0066cc
+
+drawText//添加文字到图片中
+参数：单个文字,x坐标,y坐标,16进制RGB色
+getCanvas//得到内部的画布，是一个二维数组，可直接操作内存对象使用
+参数：无
+
+getImage//获得最后的输出流
+参数：无
+
+setVerificationCode//生成验证码，参考示例1
+参数：验证码字符
 
 
