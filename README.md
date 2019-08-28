@@ -105,12 +105,18 @@ setVerificationCode//生成验证码，参考示例1
 参数：验证码字符
 
 #gif文件格式
+
 建议参考文章：
 https://www.jianshu.com/p/4fabac6b15b3
+
 https://www.jianshu.com/p/62ad4f953660
+
 http://www.alloyteam.com/2017/09/13121/
+
 http://giflib.sourceforge.net/gif89.txt
+
 http://giflib.sourceforge.net/whatsinagif/index.html
 
 #坐标
+
 本人坐标无锡,有坑可联系,联系方式,邮箱:68156987@qq.com
