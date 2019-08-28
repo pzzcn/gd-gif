@@ -15,7 +15,7 @@ BAIDU解决方案查看到有**无须组件的BMP版本**的解决方案
 https://cnodejs.org/topic/581b2502e90cfbec054d763f
 ，感觉非常好，没有直接用只是为了抱着以练手为目的，写了一个**无须组件的GIF版本验证码**
 
-![enter image description here](https://github.com/pzzcn/gd-gif/blob/master/1.png?raw=true)
+![enter image description here](https://github.com//pzzcn/gd-gif/blob/master/verificationCode.gif?raw=true)
 
 # 安装
 
