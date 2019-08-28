@@ -47,7 +47,7 @@ class GIF{
     pushColor(color){
         color=color.toUpperCase();
         for(let i=0;i<this.color.length;i++){
-            if(this.color==color){
+            if(this.color[i]==color){
                 return this;
             }
         }
@@ -100,11 +100,11 @@ class GIF{
     }
 
     Dword(n){
-       let s = n.toString("16");
-       const st="0000";
-       s=st.substr(0,4-s.length)+s;
-       s=s.substr(2,2)+s.substr(0,2)
-       return s;
+        let s = n.toString("16");
+        const st="0000";
+        s=st.substr(0,4-s.length)+s;
+        s=s.substr(2,2)+s.substr(0,2)
+        return s;
     }
 
     getGlobalColorTable(sl){
@@ -136,22 +136,22 @@ class GIF{
         b.appendStr("GIF89a");//文件类型
         b.appendHexStr(this.Dword(this.width));//逻辑屏幕宽度
         b.appendHexStr(this.Dword(this.height));//逻辑屏幕高度
-         /*
-        1    Global Color Table Flag为全局颜色表标志，即为1时表明全局颜色表有定义。
-        111  Color Resolution 代表颜色表中每种基色位长（需要+1），为111时，每个颜色用8bit表示，即我们熟悉的RGB表示法，一个颜色三字节。
-        0    Sort Flag 表示是否对颜色表里的颜色进行优先度排序，把常用的排在前面，这个主要是为了适应一些颜色解析度低的早期渲染器，现在已经很少使用了。
-        111  Global Color Table 表示颜色表的长度，计算规则是值+1作为2的幂，得到的数字就是颜色表的项数，取最大值111时，项数=256，也就是说GIF格式最多支持256色的位图，再乘以Color Resolution算出的字节数，就是调色盘的总长度。
-        000  0  2^(0+1)=2
-        001  1 2^(1+1)=4
-        010  2 2^(2+1)=8
-        011  3 2^(3+1)=16
-        100  4 2^(4+1)=32
-        101  5 2^(5+1)=64
-        110  6 2^(6+1)=128
-        111  7 2^(7+1)=256
+        /*
+       1    Global Color Table Flag为全局颜色表标志，即为1时表明全局颜色表有定义。
+       111  Color Resolution 代表颜色表中每种基色位长（需要+1），为111时，每个颜色用8bit表示，即我们熟悉的RGB表示法，一个颜色三字节。
+       0    Sort Flag 表示是否对颜色表里的颜色进行优先度排序，把常用的排在前面，这个主要是为了适应一些颜色解析度低的早期渲染器，现在已经很少使用了。
+       111  Global Color Table 表示颜色表的长度，计算规则是值+1作为2的幂，得到的数字就是颜色表的项数，取最大值111时，项数=256，也就是说GIF格式最多支持256色的位图，再乘以Color Resolution算出的字节数，就是调色盘的总长度。
+       000  0  2^(0+1)=2
+       001  1 2^(1+1)=4
+       010  2 2^(2+1)=8
+       011  3 2^(3+1)=16
+       100  4 2^(4+1)=32
+       101  5 2^(5+1)=64
+       110  6 2^(6+1)=128
+       111  7 2^(7+1)=256
 
-        1 111 0 111
-        */
+       1 111 0 111
+       */
 
         let colorSize=this.getGlobalColorTable(this.color);
         b.appendBit("11110"+this.lpad(colorSize.toString(2),"0",3));
