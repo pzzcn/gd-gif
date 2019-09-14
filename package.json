@@ -1,6 +1,6 @@
 {
   "name": "gd-gif",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "用于生成GIF文件，现阶段主要用于gif验证码的生成",
   "main": "dlist/GIF.js",
   "scripts": {
